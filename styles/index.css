@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  font-size: 14px;
+  @apply text-gray-900;
+  font-family: 'Tajawal';
+  text-align: right;
+}
+
+img {
+  z-index: 0;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.prose {
+  text-align: right !important;
+}
+.prose-lg {
+  text-align: right !important;
+}
+
+.rich-text-hero a {
+  @apply text-blue-600 underline;
+}
+
+.rich-text-banner {
+  @apply whitespace-pre-line;
+}
+.rich-text-banner a {
+  @apply underline;
+}
+
+.title {
+  @apply text-4xl leading-snug font-semibold;
+}
+
+@media (min-width: 768px) {
+  .title {
+    @apply text-5xl;
+  }
+}
+
+.with-arrow:after {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%206a.5.5%200%200%200%200%201V6zM12.854.646a.5.5%200%200%200-.708.708l.708-.708zM18%206.5l.354.354a.5.5%200%200%200%200-.708L18%206.5zm-5.854%205.146a.5.5%200%200%200%20.708.708l-.708-.708zM1%207h16.5V6H1v1zm16.646-.854l-5.5%205.5.708.708%205.5-5.5-.708-.708zm-5.5-4.792l2.75%202.75.708-.708-2.75-2.75-.708.708zm2.75%202.75l2.75%202.75.708-.708-2.75-2.75-.708.708z%22%20fill%3D%22%231264A3%22%2F%3E%3C%2Fsvg%3E);
+  content: "";
+  width: 19px;
+  height: 13px;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.nav-link a {
+  height: 100%;
+}
+
+.drop-down {
+  right: 0;
+  top: 100%;
+  width: 100%;
+  padding: 4px 60px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 1px 6.6px 6.6px hsl(0deg 0% 0% / 0.40);
+}
+
+.nav-link:hover .drop-down {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  flex: 1;
+  gap: 2rem;
+}
+
+.sublinks-list {
+  min-width: 200px;
+  /* padding: 10px; */
+}
+
+.package-div:hover {
+  transform: scale(1.07);
+  transition: transform 0.4s ease-out;
+  /* background-color: #685de2; */
+  background-color: #4338ca;
+  /* background-color: rgb(37, 99, 235); */
+  color: white !important;
+}
+.package-div:hover p {
+  color: white;
+}
+.package-div:hover svg {
+  fill: white;
+}
+
