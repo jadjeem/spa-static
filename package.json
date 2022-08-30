@@ -6,7 +6,7 @@
     "dev": "next",
     "develop": "next",
     "build": "next build",
-    "start": "next start -H 0.0.0.0",
+    "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix"
   },

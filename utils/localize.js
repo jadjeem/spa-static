@@ -5,6 +5,7 @@ export async function getLocalizedPage(targetLocale, pageContext) {
     (localization) => localization.attributes.locale === targetLocale
   )
   const localePage = await fetchAPI(`/pages/${localization.id}`)
+  console.warn(localePage)
   return localePage
 }
 
@@ -23,7 +24,7 @@ export function localizePath(page) {
 export function getLocalizedPaths(page) {
   const paths = page.locales.map((locale) => {
     return {
-      locale: locale,
+      // locale: locale,
       href: localizePath({ ...page, locale }),
     }
   })

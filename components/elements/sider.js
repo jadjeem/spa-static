@@ -1,6 +1,6 @@
-import React, { useMemo } from "react"
-import CustomLink from "./custom-link"
-import SubLinks from "./sub-links"
+import React, { useMemo } from "react";
+import CustomLink from "./custom-link";
+import SubLinks from "./sub-links";
 
 // const PartsComponents = {
 //   ComponentLinksLink: CustomLink,
@@ -10,21 +10,19 @@ import SubLinks from "./sub-links"
 const Part = ({ data }) => {
   const PartComponent = useMemo(() => {
     if (data.__typename === "ComponentLinksLink") {
-      return <CustomLink link={data}>{data.text}</CustomLink>
+      return <CustomLink link={data}>{data.text}</CustomLink>;
     }
     if (data.__typename === "ComponentLinksSubLinks") {
-      return <SubLinks title={data.title} links={data.links} />
+      return <SubLinks title={data.title} links={data.links} />;
     }
-    return <></>
-  }, [data])
+    return <></>;
+  }, [data]);
 
-  return PartComponent
-}
+  return PartComponent;
+};
 
 const Sider = ({ sider }) => {
-  console.log(sider.data)
-
-  if (!sider.data) return <></>
+  if (!sider.data) return <></>;
 
   return (
     <div className="lg:border-l-0 lg:w-48 p-4 border-gray-300 bg-gray-50">
@@ -39,7 +37,7 @@ const Sider = ({ sider }) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Sider
+export default Sider;

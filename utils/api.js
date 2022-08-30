@@ -47,7 +47,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
  * @param {string} options.locale The current locale specified in router.locale
  * @param {boolean} options.preview router isPreview value
  */
-export async function getPageData({ slug, locale, preview }) {
+export async function getPageData({ slug, preview }) {
   // Find the pages that match this slug
   const gqlEndpoint = getStrapiURL("/graphql");
   const pagesRes = await fetch(gqlEndpoint, {
@@ -73,25 +73,17 @@ export async function getPageData({ slug, locale, preview }) {
         query GetPages(
           $slug: String!
           $publicationState: PublicationState!
-          $locale: I18NLocaleCode!
+
         ) {        
           pages(
             filters: { slug: { eq: $slug } }
             publicationState: $publicationState
-            locale: $locale
+  
           ) {
             data {
               id
               attributes {
-                locale
-                localizations {
-                  data {
-                    id
-                    attributes {
-                      locale
-                    }
-                  }
-                }
+  
                 slug
                 metadata {
                   metaTitle
@@ -299,7 +291,7 @@ export async function getPageData({ slug, locale, preview }) {
       variables: {
         slug,
         publicationState: preview ? "PREVIEW" : "LIVE",
-        locale,
+        // locale,
       },
     }),
   });
@@ -314,7 +306,7 @@ export async function getPageData({ slug, locale, preview }) {
   return pagesData.data.pages.data[0];
 }
 
-export async function getTabData({ slug, locale }) {
+export async function getTabData({ slug }) {
   const gqlEndpoint = getStrapiURL("/graphql");
   const tabRes = await fetch(gqlEndpoint, {
     method: "POST",
@@ -382,7 +374,7 @@ export async function getTabData({ slug, locale }) {
 }
 
 // Get site data from Strapi (metadata, navbar, footer...)
-export async function getGlobalData(locale) {
+export async function getGlobalData() {
   const gqlEndpoint = getStrapiURL("/graphql");
   const globalRes = await fetch(gqlEndpoint, {
     method: "POST",
@@ -404,8 +396,8 @@ export async function getGlobalData(locale) {
           }
         }
       }
-      query GetGlobal($locale: I18NLocaleCode) {
-        global(locale: $locale) {
+      query GetGlobal {
+        global {
           data {
             id
             attributes {
@@ -468,7 +460,7 @@ export async function getGlobalData(locale) {
       }      
       `,
       variables: {
-        locale,
+        // locale,
       },
     }),
   });

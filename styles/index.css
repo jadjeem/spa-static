@@ -1,15 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Hakm";
+  src: url("../fonts/Hakm/VIP-Hakm-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hakm";
+  src: url("../fonts/Hakm/VIP-Hakm-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
 
 html {
   font-size: 14px;
   @apply text-gray-900;
-  font-family: 'Tajawal';
+  /* font-family: 'Hakm' 'Tajawal'; */
+  font-family: "Tajawal";
   text-align: right;
+}
+
+p, span {
+  font-family: 'Hakm';
+}
+h1, h2, h3 {
+  font-family: 'Hakm';
+  font-weight: bold;
 }
 
 img {
@@ -47,7 +69,7 @@ img {
 }
 
 .title {
-  @apply text-4xl leading-snug font-semibold;
+  @apply text-4xl leading-snug font-bold;
 }
 
 @media (min-width: 768px) {
@@ -76,7 +98,7 @@ img {
   padding: 4px 60px;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 1px 6.6px 6.6px hsl(0deg 0% 0% / 0.40);
+  box-shadow: 1px 6.6px 6.6px hsl(0deg 0% 0% / 0.4);
 }
 
 .nav-link:hover .drop-down {
@@ -105,4 +127,3 @@ img {
 .package-div:hover svg {
   fill: white;
 }
-

@@ -1,8 +1,8 @@
 module.exports = {
-  i18n: {
-    locales: ['ar'],
-    defaultLocale: 'ar',
-  },
+  // i18n: {
+  //   locales: ['ar'],
+  //   defaultLocale: 'ar',
+  // },
   reactStrictMode: true,
   async redirects() {
     return [
