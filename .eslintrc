@@ -6,18 +6,18 @@
     // "prettier"
   ],
   "plugins": [
-    "prettier"
+    // "prettier"
   ],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 80,
-        "singleQuote": false,
-        "trailingComma": "es5",
-        "semi": false,
-        "tabWidth": 2
-      }
-    ]
+    // "prettier/prettier": [
+    //   "error",
+    //   {
+    //     "printWidth": 80,
+    //     "singleQuote": false,
+    //     "trailingComma": "es5",
+    //     "semi": false,
+    //     "tabWidth": 2
+    //   }
+    // ]
   }
 }
