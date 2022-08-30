@@ -3,6 +3,10 @@ module.exports = {
   //   locales: ['ar'],
   //   defaultLocale: 'ar',
   // },
+  images: {
+    loader: 'cloudinary',
+    path: '',
+  },
   reactStrictMode: true,
   async redirects() {
     return [

@@ -78,7 +78,7 @@ export async function getStaticPaths(context) {
       // locale,
     };
   });
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps(context) {

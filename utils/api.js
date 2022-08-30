@@ -459,12 +459,13 @@ export async function getGlobalData() {
         }
       }      
       `,
-      variables: {
-        // locale,
-      },
+      // variables: {
+         // locale,
+      // },
     }),
   });
-
+  
   const global = await globalRes.json();
+  console.log(global)
   return global.data.global;
 }
