@@ -15,7 +15,7 @@ export const formatPrice = (price) => {
       count++;
     }
 
-    return ans.split('').reverse().join('') + ' S.P';
+    return ans.split('').reverse().join('');
   }
   // console.error('incorrect type. expected number, but found ', typeof price);
   return '';

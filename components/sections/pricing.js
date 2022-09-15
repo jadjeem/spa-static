@@ -17,7 +17,7 @@ const Pricing = ({ data }) => {
         {data.plans.map((plan) => (
           <div
             className={classNames(
-              "package-div",
+              "package-div hover:bg-primary-900",
               // Common classes
               "rounded-md border-2 py-4 px-4 md:w-lg lg:w-64",
               // Normal plan
@@ -27,7 +27,7 @@ const Pricing = ({ data }) => {
               },
               // Recommended plan
               {
-                "bg-primary-200 text-primary-900 border-primary-300":
+                "bg-primary-50 text-primary-1000 border-primary-300":
                   plan.isRecommended,
               }
             )}
@@ -36,15 +36,20 @@ const Pricing = ({ data }) => {
             <h2 className="text-2xl">{plan.name}</h2>
             <p
               className={classNames("mt-4 text-lg", {
-                "text-primary-700": plan.isRecommended,
+                "text-primary-900": plan.isRecommended,
                 "text-gray-700": !plan.isRecommended,
               })}
             >
               {plan.description}
             </p>
             <p className="text-center text-3xl mt-4">
-              {price(plan.price)}
-              <span className="text-base font-medium">{plan.pricePeriod}</span>
+              <div className="flex flex-row-reverse justify-center gap-2 font-semibold">
+                <span>
+                {price(plan.price)}
+                <span className="text-base font-medium">{plan.pricePeriod}</span>
+                </span>
+                <span>ل.س</span>
+              </div>
             </p>
             {plan.features && (
               <ul className="mt-4 flex flex-col gap-3">
@@ -55,7 +60,7 @@ const Pricing = ({ data }) => {
                   >
                     <span>{feature.name}</span>
                     <MdCheckBox
-                      color="#4338ca"
+                      color="#1a5322"
                       className="h-6 w-auto text-gray-900"
                     />
                   </li>

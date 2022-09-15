@@ -21,8 +21,8 @@
 html {
   font-size: 14px;
   @apply text-gray-900;
-  /* font-family: 'Hakm' 'Tajawal'; */
-  font-family: "Tajawal";
+  font-family: 'Hakm', 'Tajawal';
+  /* font-family: "Hakm"; */
   text-align: right;
 }
 
@@ -117,7 +117,7 @@ img {
   transform: scale(1.07);
   transition: transform 0.4s ease-out;
   /* background-color: #685de2; */
-  background-color: #4338ca;
+  /* background-color: #cc9966; */
   /* background-color: rgb(37, 99, 235); */
   color: white !important;
 }

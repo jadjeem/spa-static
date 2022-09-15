@@ -91,8 +91,6 @@ export async function getPageData({ slug, preview }) {
                   shareImage {
                     ...FileParts
                   }
-                  twitterCardType
-                  twitterUsername
                 }
                 contentSections {
                   __typename
@@ -224,6 +222,25 @@ export async function getPageData({ slug, preview }) {
                     title
                     content
                     type
+                  }
+                  ... on ComponentSectionsCarousel {
+                    id
+                    images {
+                      data {
+                        id
+                        attributes {
+                          name
+                          alternativeText
+                          mime
+                          url
+                          formats
+                          width
+                          height
+                        }
+                      }
+                    }
+                    title
+                    info
                   }
                 }
                 tab {
@@ -410,8 +427,6 @@ export async function getGlobalData() {
                 shareImage {
                   ...FileParts
                 }
-                twitterCardType
-                twitterUsername
               }
               metaTitleSuffix
               notificationBanner {
@@ -459,13 +474,12 @@ export async function getGlobalData() {
         }
       }      
       `,
-      // variables: {
-         // locale,
-      // },
+      variables: {
+        // locale,
+      },
     }),
   });
-  
+
   const global = await globalRes.json();
-  console.log(global)
   return global.data.global;
 }

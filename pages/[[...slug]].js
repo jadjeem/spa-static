@@ -65,7 +65,7 @@ export async function getStaticPaths(context) {
   },
   );
 
-  console.log(pages) ///////////////////////////////////////////
+  // console.log(pages) ///////////////////////////////////////////
 
   const paths = pages.data.map((page) => {
     const { slug } = page.attributes;
@@ -78,7 +78,7 @@ export async function getStaticPaths(context) {
       // locale,
     };
   });
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps(context) {

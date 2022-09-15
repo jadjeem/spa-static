@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import { linkPropTypes, mediaPropTypes } from "utils/types"
 import NextImage from "./image"
 import CustomLink from "./custom-link"
+import Image from "next/image"
 
 const Footer = ({ footer }) => {
   return (
@@ -9,7 +10,8 @@ const Footer = ({ footer }) => {
       <div className="container flex flex-col lg:flex-row lg:justify-between">
         <div>
           {footer.logo && (
-            <NextImage width="120" height="33" media={footer.logo} />
+            // <NextImage width="120" height="33" media={footer.logo} />
+            <Image width="120" height="33" src='/tala-logo.png' />
           )}
         </div>
         <nav className="flex flex-wrap flex-row-reverse lg:gap-20 items-start lg:justify-end mb-10">
@@ -36,7 +38,7 @@ const Footer = ({ footer }) => {
         </nav>
       </div>
       <div className="text-sm text-left bg-gray-200 py-6 text-gray-700">
-        <div className="container">{footer.smallText}</div>
+        <div className="container font-semibold ">{footer.smallText}</div>
       </div>
     </footer>
   )

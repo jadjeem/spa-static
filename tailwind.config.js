@@ -7,7 +7,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.indigo,
+        // primary: colors.indigo,
+        // Green
+        // primary: {
+        //   900: '#0a4312',
+        // },
+        primary: {
+          50: '#f5ebe0',
+          100: '#f0e0d1',
+          200: '#ebd6c2',
+          300: '#e6ccb3',
+          400: '#e0c2a3',
+          500: '#dbb894',
+          600: '#d6ad85',
+          700: '#d1a375',
+          800: '#cc9966',
+          900: '#b88a5c',
+          1000: '#a37a52'
+        },
       },
       container: {
         center: true,

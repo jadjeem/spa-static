@@ -27,7 +27,7 @@ const Button = ({
           },
           // Specific to when the button is fully dark
           {
-            "bg-primary-600 text-white border-primary-600":
+            "bg-primary-700 text-white border-primary-600":
               appearance === "dark",
           },
           // Specific to when the button is dark outlines

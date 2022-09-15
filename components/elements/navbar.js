@@ -10,6 +10,7 @@ import MobileNavMenu from "./mobile-nav-menu"
 import ButtonLink from "./button-link"
 import NextImage from "./image"
 import NavLink from "./nav-link.js"
+import Image from "next/image"
 
 const Navbar = ({ navbar, pageContext }) => {
   const router = useRouter()
@@ -18,14 +19,15 @@ const Navbar = ({ navbar, pageContext }) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="border-gray-200 border-b-2 text-center ">
+      <nav className="border-gray-200 border-b-2 text-center">
         <div className="container relative flex flex-row-reverse items-center justify-between">
           {/* Content aligned to the right */}
           <div className="flex flex-row-reverse items-center h-10">
             <Link href="/spa">
               <a className="h-8 w-32">
                 {navbar.logo && (
-                  <NextImage width="120" height="33" media={navbar.logo} />
+                  // <NextImage width="120" height="33" media={navbar.logo} />
+                  <Image width="120" height="33" src='/tala-logo.png' />
                 )}
               </a>
             </Link>

@@ -3,10 +3,6 @@ module.exports = {
   //   locales: ['ar'],
   //   defaultLocale: 'ar',
   // },
-  images: {
-    loader: 'cloudinary',
-    path: '',
-  },
   reactStrictMode: true,
   async redirects() {
     return [
@@ -22,12 +18,7 @@ module.exports = {
       },
       {
         source: '/beauty-shop',
-        destination: '/beauty-shop/prices',
-        permanent: false,
-      },
-      {
-        source: '/clothes',
-        destination: '/clothes/prices',
+        destination: '/beauty-shop/makeup',
         permanent: false,
       },
       {

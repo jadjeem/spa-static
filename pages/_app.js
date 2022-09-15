@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <link
           rel="shortcut icon"
-          href={getStrapiMedia(favicon.data.attributes.url)}
+          href={'/logo'}
         />
       </Head>
       {/* Global site metadata */}
@@ -30,21 +30,17 @@ const MyApp = ({ Component, pageProps }) => {
         titleTemplate={`%s | ${metaTitleSuffix}`}
         title="Page"
         description={metadata.metaDescription}
-        openGraph={{
-          images: Object.values(
-            metadata.shareImage.data.attributes.formats
-          ).map((image) => {
-            return {
-              url: getStrapiMedia(image.url),
-              width: image.width,
-              height: image.height,
-            }
-          }),
-        }}
-        twitter={{
-          cardType: metadata.twitterCardType,
-          handle: metadata.twitterUsername,
-        }}
+        // openGraph={{
+        //   images: Object.values(
+        //     metadata.shareImage.data.attributes.formats
+        //   ).map((image) => {
+        //     return {
+        //       url: getStrapiMedia(image.url),
+        //       width: image.width,
+        //       height: image.height,
+        //     }
+        //   }),
+        // }}
       />
       {/* Display the content */}
       <Component {...pageProps} />

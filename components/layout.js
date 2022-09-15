@@ -20,7 +20,7 @@ const Layout = ({ children, global, pageContext, sider }) => {
         )}
         <Navbar navbar={navbar} pageContext={pageContext} />
         <div className="lg:flex lg:flex-row-reverse flex-auto lg:gap-8">
-          {sider.data && <Sider sider={sider} />}
+          {(sider && sider.data) && <Sider sider={sider} />}
           <div className="w-full">{children}</div>
         </div>
       </div>

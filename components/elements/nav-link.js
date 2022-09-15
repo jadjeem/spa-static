@@ -32,8 +32,8 @@ const NavLink = ({ navLink }) => {
   return (
     <li
       className={classNames(
-        "nav-link hover:text-white hover:bg-indigo-700 h-full",
-        isActive() ? "bg-indigo-700 text-white" : ""
+        "nav-link hover:text-white hover:bg-primary-700 h-full",
+        isActive() ? "bg-primary-700 text-white" : ""
       )}
     >
       <CustomLink
@@ -43,7 +43,7 @@ const NavLink = ({ navLink }) => {
         {navLink.text}
       </CustomLink>
       {list && (
-        <div className="drop-down absolute top-full border-t-4 border-indigo-700 hidden text-black  ">
+        <div className="drop-down absolute top-full border-t-4 border-primary-700 hidden text-black  ">
           {list}
         </div>
       )}
