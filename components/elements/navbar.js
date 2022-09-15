@@ -27,7 +27,7 @@ const Navbar = ({ navbar, pageContext }) => {
               <a className="h-8 w-32">
                 {navbar.logo && (
                   // <NextImage width="120" height="33" media={navbar.logo} />
-                  <Image width="120" height="33" src='/tala-logo.png' />
+                  <Image width="120" height="33" alt="" src='/tala-logo.png' />
                 )}
               </a>
             </Link>

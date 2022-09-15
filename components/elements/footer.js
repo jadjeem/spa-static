@@ -11,7 +11,7 @@ const Footer = ({ footer }) => {
         <div>
           {footer.logo && (
             // <NextImage width="120" height="33" media={footer.logo} />
-            <Image width="120" height="33" src='/tala-logo.png' />
+            <Image width="120" height="33" alt="" src='/tala-logo.png' />
           )}
         </div>
         <nav className="flex flex-wrap flex-row-reverse lg:gap-20 items-start lg:justify-end mb-10">

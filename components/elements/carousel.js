@@ -4,6 +4,7 @@ import { Carousel as DefaultCarousel } from 'react-responsive-carousel';
 // import Image from 'next/image';
 import classNames from 'classnames';
 import NextImage from './image';
+import Image from 'next/image';
 
 const Carousel = ({ images }) => {
   // const [current, setCurrent] = useState(0);
@@ -23,7 +24,7 @@ const Carousel = ({ images }) => {
     () =>
       images.map((img, i) => (
         <div className='h-full' key={'carousel-image' + i}>
-          <img className='h-full' src={img.attributes.url} />
+          <Image className='h-full' alt='' src={img.attributes.url} />
         </div>
       )),
     [images]

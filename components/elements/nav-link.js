@@ -8,7 +8,7 @@ const NavLink = ({ navLink }) => {
   const router = useRouter()
   const isActive = useCallback(
     () => router.asPath.split("/")[1] === navLink.url.split("/")[1],
-    [navLink]
+    [navLink, router]
   )
   const tabData = navLink.tab?.data || null
 
