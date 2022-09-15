@@ -15,7 +15,7 @@ const ProductsView = ({
   const [selected, setSelected] = useState(null);
   const totalPages = useMemo(
     () => Math.round(totalCount / pageSize) + (totalCount % pageSize !== 0),
-    [totalCount]
+    [totalCount, pageSize]
   );
   // const [selected, setSelected] = useState(null);
   const handleSelect = useCallback((p) => setSelected(p), []);

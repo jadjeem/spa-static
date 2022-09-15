@@ -4,6 +4,9 @@ module.exports = {
   //   defaultLocale: 'ar',
   // },
   reactStrictMode: true,
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
   async redirects() {
     return [
       {

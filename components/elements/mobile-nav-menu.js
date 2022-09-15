@@ -27,7 +27,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
         <div className="flex flex-row justify-between py-2 items-center mb-10">
           {/* Company logo */}
           {/* <NextImage width="120" height="33" media={navbar.logo} /> */}
-          <Image width="120" height="33" src='/tala-logo.png' />
+          <Image width="120" height="33" alt="" src='/tala-logo.png' />
           {/* Close button */}
           <button onClick={closeSelf} className="py-1 px-1">
             <MdClose className="h-8 w-auto" />

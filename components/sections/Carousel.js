@@ -8,7 +8,7 @@ const Carousel = ({ data }) => {
     <section className='bg-primary-900 py-20 text-center flex items-center flex-col gap-8'>
       {data.title && <h2 className='title text-white mb-10'>{data.title}</h2>}
       {data.images && (
-        <div className='md:w-1/2'>
+        <div className='w-full md:w-1/2 lg:w-5/12'>
           <CarouselComponent images={data.images.data} />
         </div>
       )}

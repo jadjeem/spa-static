@@ -2,11 +2,11 @@ import React, { useCallback } from 'react';
 import NextImage from './image';
 
 const ProductItem = ({ product, onClick }) => {
-  const { images, name, price, note, description } = product.attributes;
+  const { images, name, price } = product.attributes;
   const handleClick = useCallback(() => {
     onClick(product);
     window.scroll({ top: 33, behavior: 'smooth' });
-  }, [product]);
+  }, [onClick, product]);
   return (
     <div className='hover:bg-gray-200 relative w-44' onClick={handleClick}>
       <NextImage
