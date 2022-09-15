@@ -36,15 +36,17 @@ const SkinCarePage = ({ global, pageContext }) => {
         ],
       },
     },
-  }));
+  }), []);
 
-  useEffect(async () => {
-    console.log('refresh');
+  useEffect(() => {
+    const fetch = async () => {
+      console.log('refresh');
     const { data, meta } = await getSkinCareProducts({ page });
     setData(data);
     setLoading(false);
-    console.log(meta);
     setMeta(meta);
+    }
+    fetch();
   }, [page]);
 
   // Loading screen (only possible in preview mode)

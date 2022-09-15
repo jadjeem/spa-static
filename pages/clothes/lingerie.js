@@ -38,16 +38,18 @@ const LingeriesPage = ({
         }
       ]
     }
-  } }));
+  } }), []);
 
-  useEffect(async () => {
-    console.log('refresh')
-    const { data, meta } = await getLingerires({page})
+  useEffect(() => {
+    const fetch = async () => {
+      console.log('refresh');
+    const { data, meta } = await getLingerires({ page });
     setData(data);
     setLoading(false);
-    console.log(meta)
     setMeta(meta);
-  }, [page])
+    }
+    fetch();
+  }, [page]);
 
   // Loading screen (only possible in preview mode)
   if (router.isFallback) {
