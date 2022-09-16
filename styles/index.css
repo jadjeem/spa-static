@@ -56,6 +56,10 @@ img {
 .prose-lg {
   text-align: right !important;
 }
+.prose-lg p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
 
 .rich-text-hero a {
   @apply text-blue-600 underline;

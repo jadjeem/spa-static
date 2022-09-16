@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import React, { useCallback, useMemo, useState } from 'react';
-import Button from './button';
 import NextImage from './image';
 import ProductCard from './product-card';
 import ProductItem from './product-item';

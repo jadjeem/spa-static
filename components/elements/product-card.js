@@ -12,7 +12,8 @@ const ProductCard = ({ product }) => {
           <span className='text-red-500 font-bold'>{price}</span>
           <span className='text-red-500 font-bold'>ل.س</span>
         </div>
-        <Markdown>{description}</Markdown>
+        {/* <Markdown>{description}</Markdown> */}
+        <div dangerouslySetInnerHTML={{ __html: description }} />
         <p className='text-center italic'>{note}</p>
       </div>
       <NextImage width='400' height='400' media={{ data: images.data[0] }} />

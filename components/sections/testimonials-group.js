@@ -20,7 +20,7 @@ const TestimonialsGroup = ({ data }) => {
         </CustomLink>
       )}
       {/* Current testimonial card */}
-      <div className="max-w-5xl w-8/12 sm:w-8/12 bg-white shadow-md sm:shadow-xl mx-auto flex flex-col justify-between sm:flex-row mt-10 text-right">
+      <div className="max-w-5xl w-10/12 sm:w-8/12 bg-white shadow-md sm:shadow-xl mx-auto flex flex-col justify-between sm:flex-row mt-10 text-right">
         <div className="w-full md:w-4/12 flex-shrink-0">
           <NextImage media={selectedTestimonial.picture} />
         </div>

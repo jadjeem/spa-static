@@ -36,17 +36,15 @@ const MakeupsPage = ({ global, pageContext }) => {
         ],
       },
     },
-  }), []);
+  }));
 
-  useEffect(() => {
-    const fetch = async () => {
-      console.log('refresh');
+  useEffect(async () => {
+    console.log('refresh');
     const { data, meta } = await getMakeups({ page });
     setData(data);
     setLoading(false);
+    console.log(meta);
     setMeta(meta);
-    }
-    fetch();
   }, [page]);
 
   // Loading screen (only possible in preview mode)

@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react"
+import React, { useMemo } from "react"
 import { AiOutlineInfoCircle, AiOutlineWarning } from "react-icons/ai"
 import { FiAlertOctagon } from "react-icons/fi"
 import classNames from "classnames"
@@ -20,7 +20,7 @@ const Notice = ({ data }) => {
   return (
     <div
       className={classNames(
-        "self-center flex flex-row-reverse items-center justify-between gap-2 text-righ p-8 rounded-lg my-8",
+        "self-center flex flex-row-reverse items-center justify-between gap-2 text-righ p-8 rounded-lg my-8 font-semibold",
         {
           // Apply theme based on notification type
           "bg-blue-600 text-white": data.type === "info",

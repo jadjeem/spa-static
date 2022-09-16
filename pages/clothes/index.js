@@ -36,17 +36,14 @@ const ClothesPage = ({ global, pageContext }) => {
         ],
       },
     },
-  }), []);
+  }));
 
-  useEffect(() => {
-    const fetch = async () => {
-      console.log('refresh');
+  useEffect(async () => {
+    console.log('refresh');
     const { data, meta } = await getClothes({ page });
     setData(data);
     setLoading(false);
     setMeta(meta);
-    }
-    fetch()
   }, [page]);
 
   // Loading screen (only possible in preview mode)

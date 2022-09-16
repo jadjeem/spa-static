@@ -11,13 +11,14 @@ const Hero = ({ data }) => {
         {/* Hero section label */}
         {data.label && (
           <div className='uppercase tracking-wide font-semibold'>
-            <Markdown>{data.label}</Markdown>
+            <span>{data.label}</span>
           </div>
         )}
         {/* Big title */}
         <h1 className='title mt-2 sm:mt-0 mb-6 p-2 sm:mb-2'>{data.title}</h1>
         {/* Description paragraph */}
-        <p className='text-xl mb-6'>{data.description}</p>
+        {/* <p className='text-xl mb-6'>{data.description}</p> */}
+        <div className='text-xl mb-6' dangerouslySetInnerHTML={{ __html: data.description }} />
         {/* Buttons row */}
         <div className='flex flex-row justify-center flex-wrap gap-4'>
           {data.buttons.map((button) => (
@@ -30,7 +31,8 @@ const Hero = ({ data }) => {
         </div>
         {/* Small rich text */}
         <div className='text-base md:text-sm mt-4 sm:mt-3 rich-text-hero'>
-          <Markdown>{data.smallTextWithLink}</Markdown>
+          {/* <Markdown>{data.smallTextWithLink}</Markdown> */}
+          <div dangerouslySetInnerHTML={{ __html: data.smallTextWithLink }} />
         </div>
       </div>
       {/* Right column for the image */}

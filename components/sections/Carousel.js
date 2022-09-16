@@ -14,7 +14,8 @@ const Carousel = ({ data }) => {
       )}
       {data.info && (
         <div className='my-10 text-white'>
-          <Markdown>{data.info}</Markdown>
+          {/* <Markdown>{data.info}</Markdown> */}
+          <div dangerouslySetInnerHTML={{ __html: data.info }} />
         </div>
       )}
     </section>
